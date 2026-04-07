@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 import PageLayout from './PageLayout.astro';
 
@@ -39,7 +40,7 @@ const formattedDate = new Date(date).toLocaleDateString('ja-JP', {
 
     <!-- Back Link -->
     <div class="mt-12 pt-8 border-t border-gray-200">
-      <a href="/blog" class="text-teal hover:text-teal-dark transition-colors font-medium">
+      <a href={url("/blog")} class="text-teal hover:text-teal-dark transition-colors font-medium">
         ← お知らせ一覧に戻る
       </a>
     </div>

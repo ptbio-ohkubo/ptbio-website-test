@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
@@ -47,7 +48,7 @@ const services = [
         ))}
       </div>
       <div class="mt-8 text-center">
-        <a href="/blog" class="inline-block px-6 py-2 border-2 border-teal text-teal font-medium rounded-lg hover:bg-teal hover:text-white transition-colors">
+        <a href={url("/blog")} class="inline-block px-6 py-2 border-2 border-teal text-teal font-medium rounded-lg hover:bg-teal hover:text-white transition-colors">
           一覧を見る
         </a>
       </div>
@@ -146,7 +147,7 @@ const services = [
           </tbody>
         </table>
         <div class="mt-8 text-center">
-          <a href="/company" class="inline-block px-6 py-2 border-2 border-teal text-teal font-medium rounded-lg hover:bg-teal hover:text-white transition-colors">
+          <a href={url("/company")} class="inline-block px-6 py-2 border-2 border-teal text-teal font-medium rounded-lg hover:bg-teal hover:text-white transition-colors">
             詳しく見る
           </a>
         </div>
@@ -162,10 +163,10 @@ const services = [
         ゲノム編集・バイオDXに関するご相談、資料請求など、お気軽にお問い合わせください。
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="px-8 py-3 bg-teal text-white font-medium rounded-lg hover:bg-teal-dark transition-colors">
+        <a href={url("/contact")} class="px-8 py-3 bg-teal text-white font-medium rounded-lg hover:bg-teal-dark transition-colors">
           お問い合わせ
         </a>
-        <a href="/contact/document-request" class="px-8 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-dark transition-colors">
+        <a href={url("/contact/document-request")} class="px-8 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-dark transition-colors">
           資料請求
         </a>
       </div>

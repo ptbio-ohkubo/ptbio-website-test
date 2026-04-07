@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 const currentYear = new Date().getFullYear();
 ---
@@ -7,7 +8,7 @@ const currentYear = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
       <!-- Company Info -->
       <div class="lg:col-span-1">
-        <a href="/" class="text-2xl font-bold text-teal font-[var(--font-english)]">PtBio</a>
+        <a href={url("/")} class="text-2xl font-bold text-teal font-[var(--font-english)]">PtBio</a>
         <p class="mt-2 text-sm text-gray-400">プラチナバイオ株式会社</p>
         <p class="mt-4 text-sm text-gray-400 leading-relaxed">
           〒657-0013<br />
@@ -20,11 +21,11 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4">ページ</h3>
         <ul class="space-y-2">
-          <li><a href="/company" class="text-sm text-gray-400 hover:text-teal transition-colors">会社概要</a></li>
-          <li><a href="/recruitment" class="text-sm text-gray-400 hover:text-teal transition-colors">採用情報</a></li>
-          <li><a href="/resources" class="text-sm text-gray-400 hover:text-teal transition-colors">リソース</a></li>
-          <li><a href="/blog" class="text-sm text-gray-400 hover:text-teal transition-colors">お知らせ</a></li>
-          <li><a href="/contact" class="text-sm text-gray-400 hover:text-teal transition-colors">お問い合わせ</a></li>
+          <li><a href={url("/company")} class="text-sm text-gray-400 hover:text-teal transition-colors">会社概要</a></li>
+          <li><a href={url("/recruitment")} class="text-sm text-gray-400 hover:text-teal transition-colors">採用情報</a></li>
+          <li><a href={url("/resources")} class="text-sm text-gray-400 hover:text-teal transition-colors">リソース</a></li>
+          <li><a href={url("/blog")} class="text-sm text-gray-400 hover:text-teal transition-colors">お知らせ</a></li>
+          <li><a href={url("/contact")} class="text-sm text-gray-400 hover:text-teal transition-colors">お問い合わせ</a></li>
         </ul>
       </div>
 
@@ -32,8 +33,8 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4">サービス</h3>
         <ul class="space-y-2">
-          <li><a href="/service/genome" class="text-sm text-gray-400 hover:text-teal transition-colors">ゲノム編集</a></li>
-          <li><a href="/service/biodx" class="text-sm text-gray-400 hover:text-teal transition-colors">バイオDX</a></li>
+          <li><a href={url("/service/genome")} class="text-sm text-gray-400 hover:text-teal transition-colors">ゲノム編集</a></li>
+          <li><a href={url("/service/biodx")} class="text-sm text-gray-400 hover:text-teal transition-colors">バイオDX</a></li>
         </ul>
       </div>
 
@@ -41,14 +42,14 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4">お問い合わせ</h3>
         <ul class="space-y-2">
-          <li><a href="/contact" class="text-sm text-gray-400 hover:text-teal transition-colors">お問い合わせフォーム</a></li>
-          <li><a href="/contact/document-request" class="text-sm text-gray-400 hover:text-teal transition-colors">資料請求</a></li>
+          <li><a href={url("/contact")} class="text-sm text-gray-400 hover:text-teal transition-colors">お問い合わせフォーム</a></li>
+          <li><a href={url("/contact/document-request")} class="text-sm text-gray-400 hover:text-teal transition-colors">資料請求</a></li>
         </ul>
         <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mt-6 mb-4">ガバナンス</h3>
         <ul class="space-y-2">
-          <li><a href="/company/governance-policy" class="text-sm text-gray-400 hover:text-teal transition-colors">プライバシーポリシー</a></li>
-          <li><a href="/company/governance-fraudprevention" class="text-sm text-gray-400 hover:text-teal transition-colors">不正防止対策の基本方針</a></li>
-          <li><a href="/company/governance-plan" class="text-sm text-gray-400 hover:text-teal transition-colors">一般事業主行動計画</a></li>
+          <li><a href={url("/company/governance-policy")} class="text-sm text-gray-400 hover:text-teal transition-colors">プライバシーポリシー</a></li>
+          <li><a href={url("/company/governance-fraudprevention")} class="text-sm text-gray-400 hover:text-teal transition-colors">不正防止対策の基本方針</a></li>
+          <li><a href={url("/company/governance-plan")} class="text-sm text-gray-400 hover:text-teal transition-colors">一般事業主行動計画</a></li>
         </ul>
       </div>
     </div>

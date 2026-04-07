@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 
@@ -42,7 +43,7 @@ const { title, subtitle, heroImage, description } = Astro.props;
   <!-- Back -->
   <section class="pb-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="/" class="text-teal hover:text-teal-dark transition-colors font-medium">
+      <a href={url("/")} class="text-teal hover:text-teal-dark transition-colors font-medium">
         ← トップに戻る
       </a>
     </div>

@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 import ProjectDetail from '../../components/ProjectDetail.astro';
 ---
@@ -11,6 +12,6 @@ import ProjectDetail from '../../components/ProjectDetail.astro';
     サービスの詳細はWixサイトから移行時にコンテンツを差し替えてください。
   </p>
   <div class="mt-8">
-    <a href="/service/genome" class="text-teal hover:text-teal-dark font-medium">← ゲノム編集トップに戻る</a>
+    <a href={url("/service/genome")} class="text-teal hover:text-teal-dark font-medium">← ゲノム編集トップに戻る</a>
   </div>
 </ProjectDetail>

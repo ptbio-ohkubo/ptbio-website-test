@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
@@ -25,17 +26,17 @@ import ServiceCard from '../../components/ServiceCard.astro';
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
           title="産業有用生物の高精度ゲノムデータ取得"
-          href="/service/biodx-1"
+          href={url("/service/biodx-1")}
           description="高品質なゲノム配列データの取得・解析"
         />
         <ServiceCard
           title="標的候補遺伝子・マーカーの探索"
-          href="/service/biodx-2"
+          href={url("/service/biodx-2")}
           description="バイオインフォマティクスによる標的候補の同定"
         />
         <ServiceCard
           title="環境微生物等の細菌叢・機能解析"
-          href="/service/biodx-3"
+          href={url("/service/biodx-3")}
           description="メタゲノム解析による微生物叢の機能解明"
         />
       </div>

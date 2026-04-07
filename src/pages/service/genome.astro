@@ -1,3 +1,4 @@
+import { url } from '../utils/url';
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
@@ -26,12 +27,12 @@ import ServiceCard from '../../components/ServiceCard.astro';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <ServiceCard
           title="Platinum TALEN作製サービス"
-          href="/service/genome-1"
+          href={url("/service/genome-1")}
           description="高活性Platinum TALENの設計・作製を承ります"
         />
         <ServiceCard
           title="ZF-ND1作製サービス"
-          href="/service/zf-nd1"
+          href={url("/service/zf-nd1")}
           description="Zinc Finger-ND1の設計・作製サービス"
         />
       </div>
