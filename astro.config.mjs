@@ -5,7 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pt-bio.com',
+  site: 'https://ptbio-ohkubo.github.io',
+  base: '/ptbio-website-test',
   vite: {
     plugins: [tailwindcss()]
   },
