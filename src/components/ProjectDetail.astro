@@ -1,0 +1,50 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  heroImage?: string;
+  description?: string;
+}
+
+const { title, subtitle, heroImage, description } = Astro.props;
+---
+
+<PageLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="relative h-[40vh] sm:h-[50vh] overflow-hidden">
+    <div class="absolute inset-0 bg-dark/60 z-10" />
+    {heroImage ? (
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style={`background-image: url('${heroImage}');`} />
+    ) : (
+      <div class="absolute inset-0 bg-gradient-to-br from-teal to-dark" />
+    )}
+    <div class="relative z-20 h-full flex items-center justify-center text-center px-4">
+      <div>
+        {subtitle && (
+          <p class="text-sm text-white/80 font-[var(--font-english)] tracking-wider uppercase mb-2">{subtitle}</p>
+        )}
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">{title}</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none prose-headings:text-dark prose-a:text-teal">
+        <slot />
+      </div>
+    </div>
+  </section>
+
+  <!-- Back -->
+  <section class="pb-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a href="/" class="text-teal hover:text-teal-dark transition-colors font-medium">
+        ← トップに戻る
+      </a>
+    </div>
+  </section>
+</PageLayout>

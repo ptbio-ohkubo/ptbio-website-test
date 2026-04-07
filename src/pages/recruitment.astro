@@ -1,0 +1,24 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<PageLayout title="採用情報" description="プラチナバイオ株式会社の採用情報">
+  <section class="py-12 lg:py-20 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm font-semibold tracking-widest uppercase text-teal font-[var(--font-english)]">Recruitment</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-dark">採用情報</h1>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="一緒に未来を創る仲間を募集しています" subtitle="Join Us" />
+      <div class="prose prose-lg max-w-none text-text-light">
+        <p>
+          採用情報の詳細はWixサイトから移行時にコンテンツを差し替えてください。
+        </p>
+      </div>
+    </div>
+  </section>
+</PageLayout>

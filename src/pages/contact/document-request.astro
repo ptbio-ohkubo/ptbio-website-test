@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+---
+
+<PageLayout title="資料請求" description="プラチナバイオの資料請求はこちらから">
+  <section class="py-12 lg:py-20 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm font-semibold tracking-widest uppercase text-teal font-[var(--font-english)]">Document Request</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-dark">資料請求</h1>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm text-text-light mb-8">
+        サービス資料をご希望の方は、以下のフォームよりお申し込みください。<br />
+        <span class="text-red-500">*</span> は必須項目です。
+      </p>
+      <ContactForm formspreeEndpoint="https://formspree.io/f/YOUR_DOC_FORM_ID" />
+    </div>
+  </section>
+</PageLayout>

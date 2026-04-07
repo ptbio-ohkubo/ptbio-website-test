@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/hono/works/Claude/ptbio/ptbio-website/ remote -v)",
+      "Bash(git -C /Users/hono/works/Claude/ptbio/ptbio-website/ status)",
+      "Read(//Users/hono/works/Claude/ptbio/**)",
+      "Bash(zip -r ptbio-website.zip ptbio-website -x \"*/node_modules/*\" \"*/.DS_Store\" \"*/.astro/*\" \"*/dist/*\")",
+      "Bash(rm:*)"
+    ]
+  }
+}

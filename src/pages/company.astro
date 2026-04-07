@@ -1,0 +1,137 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<PageLayout title="会社概要" description="プラチナバイオ株式会社の会社概要、ビジョン・ミッション、役員紹介、沿革、アクセス">
+  <!-- Page Header -->
+  <section class="py-12 lg:py-20 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm font-semibold tracking-widest uppercase text-teal font-[var(--font-english)]">Company</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-dark">会社概要</h1>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="ビジョン・ミッション" subtitle="Vision & Mission" />
+      <div class="space-y-8">
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-teal mb-3">Vision</h3>
+          <p class="text-lg text-dark leading-relaxed">バイオテクノロジーの力で、持続可能な未来を創る</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-teal mb-3">Mission</h3>
+          <p class="text-lg text-dark leading-relaxed">
+            独自のゲノム編集技術とデータ駆動型アプローチにより、<br class="hidden sm:inline" />
+            食・医療・環境の課題解決に貢献する
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message -->
+  <section class="py-16 lg:py-24 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="代表メッセージ" subtitle="Message" />
+      <div class="bg-white rounded-lg p-8 shadow-sm">
+        <p class="text-text-light leading-relaxed">
+          <!-- Wixサイトからの代表メッセージを挿入 -->
+          代表メッセージの内容がここに入ります。Wixサイトから移行時にコンテンツを差し替えてください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Info -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="会社概要" subtitle="Overview" />
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="border-b border-gray-200">
+            <th class="py-4 pr-4 text-left font-medium text-text w-1/4">会社名</th>
+            <td class="py-4 text-text-light">プラチナバイオ株式会社</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <th class="py-4 pr-4 text-left font-medium text-text">英文社名</th>
+            <td class="py-4 text-text-light">Platinum Bio, Inc.</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <th class="py-4 pr-4 text-left font-medium text-text">設立</th>
+            <td class="py-4 text-text-light">2017年7月</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <th class="py-4 pr-4 text-left font-medium text-text">所在地</th>
+            <td class="py-4 text-text-light">〒657-0013 兵庫県神戸市灘区六甲台町1-1 神戸大学統合研究拠点内</td>
+          </tr>
+          <tr class="border-b border-gray-200">
+            <th class="py-4 pr-4 text-left font-medium text-text">事業内容</th>
+            <td class="py-4 text-text-light">ゲノム編集技術の研究開発、バイオインフォマティクスサービス</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Officers -->
+  <section class="py-16 lg:py-24 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="役員紹介" subtitle="Officers" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg p-6 shadow-sm text-center">
+          <div class="w-32 h-32 mx-auto rounded-full bg-light mb-4 overflow-hidden">
+            <!-- Team member photo placeholder -->
+          </div>
+          <h3 class="text-lg font-bold text-dark">山本 卓</h3>
+          <p class="text-sm text-teal mt-1">代表取締役 CSO</p>
+          <p class="text-sm text-text-light mt-2">広島大学大学院統合生命科学研究科 教授</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm text-center">
+          <div class="w-32 h-32 mx-auto rounded-full bg-light mb-4 overflow-hidden">
+            <!-- Team member photo placeholder -->
+          </div>
+          <h3 class="text-lg font-bold text-dark">坊農 秀雅</h3>
+          <p class="text-sm text-teal mt-1">取締役 CIO</p>
+          <p class="text-sm text-text-light mt-2">広島大学大学院統合生命科学研究科 教授</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="沿革" subtitle="History" />
+      <div class="space-y-4">
+        <div class="flex gap-4 items-start">
+          <span class="text-sm font-medium text-teal whitespace-nowrap w-24">2017年7月</span>
+          <p class="text-sm text-text-light">プラチナバイオ株式会社設立</p>
+        </div>
+        <!-- Wixサイトから沿革データを移行 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="py-16 lg:py-24 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading title="アクセス" subtitle="Access" />
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+        <div class="aspect-video bg-gray-200">
+          <!-- Google Maps embed placeholder -->
+          <div class="w-full h-full flex items-center justify-center text-text-light text-sm">
+            Google Maps（神戸大学統合研究拠点）
+          </div>
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-text-light">
+            〒657-0013 兵庫県神戸市灘区六甲台町1-1 神戸大学統合研究拠点内
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

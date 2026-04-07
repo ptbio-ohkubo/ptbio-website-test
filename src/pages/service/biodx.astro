@@ -1,0 +1,44 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+---
+
+<PageLayout title="バイオDX" description="プラチナバイオのバイオDXサービス - ゲノムデータ解析・微生物叢解析">
+  <section class="relative h-[40vh] sm:h-[50vh] overflow-hidden">
+    <div class="absolute inset-0 bg-dark/60 z-10" />
+    <div class="absolute inset-0 bg-gradient-to-br from-teal to-dark" />
+    <div class="relative z-20 h-full flex items-center justify-center text-center px-4">
+      <div>
+        <p class="text-sm text-white/80 font-[var(--font-english)] tracking-wider uppercase mb-2">Bio DX</p>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">バイオDX</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-text-light text-center mb-12 leading-relaxed">
+        バイオインフォマティクスとデータサイエンスを活用した<br class="hidden sm:inline" />
+        ゲノムデータ解析サービスを提供します。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title="産業有用生物の高精度ゲノムデータ取得"
+          href="/service/biodx-1"
+          description="高品質なゲノム配列データの取得・解析"
+        />
+        <ServiceCard
+          title="標的候補遺伝子・マーカーの探索"
+          href="/service/biodx-2"
+          description="バイオインフォマティクスによる標的候補の同定"
+        />
+        <ServiceCard
+          title="環境微生物等の細菌叢・機能解析"
+          href="/service/biodx-3"
+          description="メタゲノム解析による微生物叢の機能解明"
+        />
+      </div>
+    </div>
+  </section>
+</PageLayout>

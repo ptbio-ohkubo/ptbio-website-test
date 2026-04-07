@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = 'プラチナバイオ株式会社 - バイオテクノロジーの力で、持続可能な未来を創る', ogImage = '/og-image.png' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- SEO -->
+  <title>{title} | プラチナバイオ株式会社</title>
+  <meta name="description" content={description} />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={`${title} | プラチナバイオ株式会社`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+  <meta property="og:site_name" content="プラチナバイオ株式会社" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <slot name="head" />
+</head>
+<body class="bg-white text-text antialiased">
+  <slot />
+</body>
+</html>

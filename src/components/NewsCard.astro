@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  href: string;
+  thumbnail?: string;
+  excerpt?: string;
+}
+
+const { title, date, href, thumbnail, excerpt } = Astro.props;
+const formattedDate = new Date(date).toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<a href={href} class="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+  {thumbnail && (
+    <div class="aspect-video overflow-hidden bg-light">
+      <img
+        src={thumbnail}
+        alt={title}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  )}
+  <div class="p-4 lg:p-5">
+    <time class="text-xs text-text-light" datetime={date}>{formattedDate}</time>
+    <h3 class="mt-1 text-sm sm:text-base font-bold text-dark group-hover:text-teal transition-colors line-clamp-2">
+      {title}
+    </h3>
+    {excerpt && (
+      <p class="mt-2 text-sm text-text-light line-clamp-2">{excerpt}</p>
+    )}
+  </div>
+</a>

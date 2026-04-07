@@ -1,0 +1,47 @@
+---
+import PageLayout from './PageLayout.astro';
+
+interface Props {
+  title: string;
+  date: string;
+  thumbnail?: string;
+  excerpt?: string;
+}
+
+const { title, date, thumbnail, excerpt } = Astro.props;
+const formattedDate = new Date(date).toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<PageLayout title={title} description={excerpt}>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <!-- Article Header -->
+    <header class="mb-8">
+      <time class="text-sm text-text-light" datetime={date}>{formattedDate}</time>
+      <h1 class="mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-dark leading-tight">
+        {title}
+      </h1>
+    </header>
+
+    {thumbnail && (
+      <div class="mb-8 rounded-lg overflow-hidden">
+        <img src={thumbnail} alt={title} class="w-full h-auto" />
+      </div>
+    )}
+
+    <!-- Article Body -->
+    <div class="prose prose-lg max-w-none prose-headings:text-dark prose-a:text-teal prose-a:no-underline hover:prose-a:underline">
+      <slot />
+    </div>
+
+    <!-- Back Link -->
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <a href="/blog" class="text-teal hover:text-teal-dark transition-colors font-medium">
+        ← お知らせ一覧に戻る
+      </a>
+    </div>
+  </article>
+</PageLayout>

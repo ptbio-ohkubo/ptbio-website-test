@@ -1,0 +1,40 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+---
+
+<PageLayout title="ゲノム編集" description="プラチナバイオのゲノム編集サービス - Platinum TALEN、ZF-ND1">
+  <section class="relative h-[40vh] sm:h-[50vh] overflow-hidden">
+    <div class="absolute inset-0 bg-dark/60 z-10" />
+    <div class="absolute inset-0 bg-gradient-to-br from-teal to-dark" />
+    <div class="relative z-20 h-full flex items-center justify-center text-center px-4">
+      <div>
+        <p class="text-sm text-white/80 font-[var(--font-english)] tracking-wider uppercase mb-2">Genome Editing</p>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">ゲノム編集</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-text-light text-center mb-12 leading-relaxed">
+        Platinum TALENをはじめとする独自の高精度ゲノム編集技術で、<br class="hidden sm:inline" />
+        お客様の研究開発を支援します。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ServiceCard
+          title="Platinum TALEN作製サービス"
+          href="/service/genome-1"
+          description="高活性Platinum TALENの設計・作製を承ります"
+        />
+        <ServiceCard
+          title="ZF-ND1作製サービス"
+          href="/service/zf-nd1"
+          description="Zinc Finger-ND1の設計・作製サービス"
+        />
+      </div>
+    </div>
+  </section>
+</PageLayout>

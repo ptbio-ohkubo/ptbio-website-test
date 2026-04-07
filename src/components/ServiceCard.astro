@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  image?: string;
+  description?: string;
+}
+
+const { title, href, image, description } = Astro.props;
+---
+
+<a href={href} class="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+  {image && (
+    <div class="aspect-video overflow-hidden bg-light">
+      <img
+        src={image}
+        alt={title}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  )}
+  <div class="p-5 lg:p-6">
+    <h3 class="text-lg font-bold text-dark group-hover:text-teal transition-colors">
+      {title}
+    </h3>
+    {description && (
+      <p class="mt-2 text-sm text-text-light">{description}</p>
+    )}
+    <span class="inline-block mt-3 text-sm text-teal font-medium group-hover:translate-x-1 transition-transform">
+      詳しく見る →
+    </span>
+  </div>
+</a>
